@@ -2,7 +2,7 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include ActionView::Helpers::DateHelper
 
   def start(*)
-    respond_with :message, text: t('.hi')
+    respond_with :message, text: "Hi!"
   end
 
 

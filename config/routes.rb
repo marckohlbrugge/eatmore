@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :users, only: [:show]
+  telegram_webhook TelegramWebhooksController
+
+  get "@:id", to: "users#show", as: :user
+
   root to: "users#index"
 end

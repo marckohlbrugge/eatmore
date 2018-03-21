@@ -1,0 +1,7 @@
+%h1= @user.username
+
+%ol
+  - @meals.each do |meal|
+    %li
+      = meal.name
+      = image_tag meal.image.url
