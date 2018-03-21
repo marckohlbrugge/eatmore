@@ -2,7 +2,20 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include ActionView::Helpers::DateHelper
 
   def start(*)
-    respond_with :message, text: "Hi!"
+    text = %{
+      👋 Hi there,
+
+I will help you eat more. Here's how it works:
+
+Every time you eat a meal. Snap a picture and send it to me. Make sure to send it as a photo and not a file. You can add a caption to the photo if you'd like.
+
+Type /meals to see all the meals you've eaten.
+
+You can turn on /reminders to get notified when you haven't eaten in a while. Type /reminders to toggle your reminders on/off.
+
+Bon appetite!
+    }
+    respond_with :message, text: text
   end
 
 
@@ -32,11 +45,23 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
   end
 
   def meals(*)
-    lines = user.meals.collect do |meal|
-      "#{meal.created_at} – #{meal.name}"
+    lines = user.meals.order(created_at: :desc).collect do |meal|
+      "#{time_ago_in_words meal.created_at} ago – #{meal.name}"
     end
 
     respond_with :message, text: lines.join("\n")
+  end
+
+  def reminders(*)
+    user.toggle! :reminders_enabled
+
+    text = if user.reminders_enabled?
+             "🚨 Reminders are turned on. Type /reminders to turn them off."
+           else
+             "😶 Reminders are turned off. Type /reminders to turn them on."
+           end
+
+    respond_with :message, text: text
   end
 
   private

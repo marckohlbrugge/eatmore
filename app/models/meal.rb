@@ -4,4 +4,5 @@ class Meal < ApplicationRecord
   belongs_to :user
 
   scope :newest, -> { order(created_at: :desc).first }
+  # scope :visible, -> { where(visible: true) }
 end
