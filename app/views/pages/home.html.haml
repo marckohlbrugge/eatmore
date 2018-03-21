@@ -2,11 +2,16 @@
 
   .modal
     .avatar
-    %h1 Eat More
+    -# %h1 Eat More
     %h2 @#{ENV.fetch("TELEGRAM_BOT_USERNAME")}
     %p Eat More helps you eat more.
     %p Track your meals by simply sending a quick photo with an optional caption.
     %p The bot will remind you when you haven’t eaten in a while.
 
     = link_to "Add to Telegram", "https://t.me/#{ENV.fetch("TELEGRAM_BOT_USERNAME")}"
+
+  .wip
+    = link_to "https://wip.chat/products/970" do
+      .text Follow on WIP
+      .icon 🚧
 

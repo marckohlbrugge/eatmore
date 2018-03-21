@@ -4,8 +4,7 @@ body
   font-family: "Avenir Next", "AvenirNext", Helvetica, Arial, sans-serif
 
 .wrapper
-  background-image: asset-url("pexels-photo-793785.jpeg"), asset-url("thumbnail.jpeg")
-  background-size: cover
+  background-image: asset-url("donuts.png")
   background-position: center center
   display: flex
   height: 100vh
@@ -13,28 +12,32 @@ body
   justify-content: center
   align-items: center
   overflow: auto
+  padding: 1rem 0
+  box-sizing: border-box
 
 .modal
   box-sizing: border-box
   max-width: 90vw
   width: 25rem
-  background: white
+  background-color: white
   box-shadow: 0 0 3rem rgba(0,0,0,0.9)
   padding: 3rem
   font-size: 1.3em
   height: auto
-  border-radius: 0.2rem
+  border-radius: 0.5rem
   display: flex
   flex-direction: column
   align-items: center
+  margin-bottom: 5rem // for wip widget
 
   .avatar
-    background-image: asset-url("pexels-photo-744780.jpeg")
-    background-size: cover
+    background-image: asset-url("eatmore.png")
+    background-size: contain
+    background-repeat: no-repeat
     background-position: center center
-    height: 6rem
-    width: 6rem
-    border-radius: 6rem
+    height: 7rem
+    width: 12rem
+    // border-radius: 6rem
     margin-bottom: 1rem
 
 
@@ -76,3 +79,26 @@ body
   a:hover
     background-image: linear-gradient(-180deg, darken(#37AEE2 , 10%) 0%, darken(#1E96C8, 10%) 100%)
 
+.wip
+  a:link, a:visited
+    position: absolute
+    bottom: 0.5rem
+    right: 0.5rem
+    display: flex
+    align-items: center
+    padding: 0.4rem 0.6rem
+    background: white
+    text-decoration: none
+    border-radius: 0.5rem
+    color: black
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.2)
+    .icon
+    .text
+      display: none
+      font-size: 0.9em
+      margin-right: 0.5em
+  a:hover
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.5)
+
+    .text
+      display: block
