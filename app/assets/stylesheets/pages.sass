@@ -1,0 +1,76 @@
+body
+  margin: 0
+  padding: 0
+  font-family: "Avenir Next", "AvenirNext", Helvetica, Arial, sans-serif
+
+.wrapper
+  background-image: asset-url("ali-inay-9858-unsplash.jpg")
+  background-size: cover
+  background-position: center center
+  display: flex
+  height: 100vh
+  width: 100vw
+  justify-content: center
+  align-items: center
+
+.modal
+  max-width: 80vw
+  width: 20rem
+  background: white
+  box-shadow: 0 0 3rem rgba(0,0,0,0.9)
+  padding: 3rem
+  font-size: 1.3em
+  height: auto
+  border-radius: 0.2rem
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  .avatar
+    background-image: asset-url("pexels-photo-744780.jpeg")
+    background-size: cover
+    background-position: center center
+    height: 6rem
+    width: 6rem
+    border-radius: 6rem
+    margin-bottom: 1rem
+
+
+  h1
+    font-weight: bold
+    margin: 0
+    text-align: center
+
+  h2
+    margin: 0.3em 0 1em 0
+    text-align: center
+    font-size: 1em
+    color: #999
+    font-weight: normal
+
+  p
+    line-height: 1.5
+    width: 100%
+    margin: 0 0 1rem 0
+
+  a:link, a:visited
+    margin-top: 1em
+    box-sizing: border-box
+    width: 100%
+    display: flex
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%)
+    border-radius: 0.5rem
+    padding: 1rem
+    color: white
+    text-decoration: none
+    justify-content: center
+    &::before
+      display: block
+      content: ""
+      background-image: asset-url("telegram_airplane.svg")
+      background-repeat: no-repeat
+      background-size: contains
+      width: 3rem
+  a:hover
+    background-image: linear-gradient(-180deg, darken(#37AEE2 , 10%) 0%, darken(#1E96C8, 10%) 100%)
+

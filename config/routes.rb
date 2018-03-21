@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get "@:id", to: "users#show", as: :user
 
-  root to: "users#index"
+  root to: "pages#home"
 end
