@@ -49,7 +49,13 @@ Bon appetite!
       "#{time_ago_in_words meal.created_at} ago – #{meal.name}"
     end
 
-    respond_with :message, text: lines.join("\n")
+    text = if lines.any?
+             lines.join("\n")
+           else
+             "No meals logged yet."
+           end
+
+    respond_with :message, text: text
   end
 
   def reminders(*)
