@@ -205,6 +205,8 @@ GEM
     sexp_processor (4.10.1)
     shrine (2.9.0)
       down (~> 4.1)
+    simple_calendar (2.2.7)
+      rails (>= 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -259,6 +261,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   shrine
+  simple_calendar (~> 2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   telegram-bot!

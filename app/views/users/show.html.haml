@@ -1,12 +1,12 @@
 :sass
   img
-    max-height: 25vh
-    max-width: 25vw
+    max-height: 100px
+    max-width: 100px
 
 %h1= @user.username
 
-%ol
-  - @meals.each do |meal|
-    %li
-      = meal.name
-      = image_tag meal.image.url
+= month_calendar do |date|
+  = date
+  - date_range = date.beginning_of_day..date.end_of_day
+  - @user.meals.where(created_at: date_range).each do |meal|
+    = image_tag meal.image.url
