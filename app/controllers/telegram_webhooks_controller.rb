@@ -46,7 +46,7 @@ Bon appetite!
 
   def meals(*)
     lines = user.meals.order(created_at: :desc).collect do |meal|
-      "#{time_ago_in_words meal.created_at} ago – #{meal.name}"
+      "#{time_ago_in_words meal.created_at} ago – #{meal.name || "(no description)"}"
     end
 
     text = if lines.any?
@@ -69,6 +69,11 @@ Bon appetite!
 
     respond_with :message, text: text
   end
+
+  rescue_from Telegram::Bot::Forbidden do
+    # Forbidden: bot was blocked by the user
+  end
+
 
   private
 
