@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_22_073945) do
+ActiveRecord::Schema.define(version: 2018_03_22_075558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_03_22_073945) do
     t.datetime "updated_at", null: false
     t.boolean "reminders_enabled", default: true
     t.datetime "reminded_at"
+    t.string "profile_token"
+    t.index ["profile_token"], name: "index_users_on_profile_token", unique: true
   end
 
   add_foreign_key "meals", "users"

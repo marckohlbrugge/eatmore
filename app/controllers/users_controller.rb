@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by! username: params[:id]
+    @user = User.find_by! profile_token: params[:id]
     @meals = @user.meals
-    render plain: "Not yet."
   end
 end

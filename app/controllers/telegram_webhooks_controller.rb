@@ -1,5 +1,6 @@
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include ActionView::Helpers::DateHelper
+  include Rails.application.routes.url_helpers
 
   def start(*)
     text = %{
@@ -10,6 +11,7 @@ I will help you eat more. Here's how it works:
 Every time you eat a meal. Snap a picture and send it to me. Make sure to send it as a photo and not a file. You can add a caption to the photo if you'd like.
 
 Type /meals to see all the meals you've eaten.
+Type /link to get a secret link to your private profile
 
 You can turn on /reminders to get notified when you haven't eaten in a while. Type /reminders to toggle your reminders on/off.
 
@@ -42,6 +44,10 @@ Bon appetite!
 
   def last(*)
     respond_with :message, text: "Your last meal was #{time_ago_in_words(last_meal_at)} ago"
+  end
+
+  def link(*)
+    respond_with :message, text: user_url(user, host: ENV.fetch("HOST"))
   end
 
   def meals(*)

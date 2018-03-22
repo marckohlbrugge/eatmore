@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_token :profile_token
+
   has_many :meals
 
   scope :needs_reminding, -> {
@@ -11,7 +13,7 @@ class User < ApplicationRecord
   before_create :set_reminded_at
 
   def to_param
-    username
+    profile_token
   end
 
   def last_meal_at
