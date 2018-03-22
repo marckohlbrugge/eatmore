@@ -50,6 +50,10 @@ Bon appetite!
     respond_with :message, text: user_url(user, host: ENV.fetch("HOST"))
   end
 
+  def botstats(*)
+    respond_with :message, text: "#{User.count} users, #{Meal.count} meals."
+  end
+
   def meals(*)
     lines = user.meals.order(created_at: :desc).collect do |meal|
       "#{time_ago_in_words meal.created_at} ago – #{meal.name || "(no description)"}"
