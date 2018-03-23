@@ -6,8 +6,8 @@ class User < ApplicationRecord
   scope :needs_reminding, -> {
     joins(:meals).
     where(reminders_enabled: true).
-    where.not("meals.created_at < ?", 6.hours.ago).
-    where.not("reminded_at < ?", 3.hours.ago).
+    where.not("meals.created_at > ?", 6.hours.ago).
+    where.not("reminded_at > ?", 3.hours.ago).
     distinct
   }
 
