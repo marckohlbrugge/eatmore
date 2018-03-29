@@ -36,7 +36,7 @@ configure the poller.
 I use Heroku for hosting which doesn't support file uploads so I'm using S3
 instead. If you want to simplify your setup you can configure
 [Shrine](https://shrinerb.com) to use your local file system instead. You can do
-this in [`config/initializes/shrine.rb`](config/initializes/shrine.rb).
+this in [`config/initializers/shrine.rb`](config/initializers/shrine.rb).
 
 ## Want to join a community of makers?
 
