@@ -1,14 +1,13 @@
 # Eat More
 
 <p align"center">
-![Eat More](https://raw.githubusercontent.com/marckohlbrugge/eatmore/master/app/assets/images/eatmore.png?token=AAFsXIYAAFCNRD7AjIlHHY8nBDIiEYOTks5axg_wwA%3D%3D)
+![Eat More](https://raw.githubusercontent.com/marckohlbrugge/eatmore/master/app/assets/images/eatmore.png)
 </p>
 
 [Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
 
 I am open sourcing the code to give you an idea of what it takes to build such
-a bot and hopefully inspire you to create your own. Note that I'm unable to
-provide support, bug fixes, or respond to feature requests.
+a bot and hopefully inspire you to create your own.
 
 ## Installation
 
@@ -46,6 +45,13 @@ this in `config/initializes/shrine.rb`.
 Eat More was built in public in 1 day on [WIP](https://wip.chat). We are a
 community of makers motivating each other to ship. [Join us](https://wip.chat).
 
+## Questions, feature requests, bugs, etc
+
+Please [open an issue](https://github.com/marckohlbrugge/eatmore/issues/new) if
+you find a bug. Pull requests with bug fixes or improvements are welcome.
+
+The code is provided as is. Support inquiries and feature requests are likely to
+be ignored. Please don't create issues for these.
 
 ## LICENSE
 
