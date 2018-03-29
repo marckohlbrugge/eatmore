@@ -1,26 +1,51 @@
-# README
+# Eat More
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
 
-Things you may want to cover:
+I am open sourcing the code to give you an idea of what it takes to build such
+a bot and hopefully inspire you to create your own. Note that I'm unable to
+provide support, bug fixes, or respond to feature requests.
 
-* Ruby version
+## Installation
 
-* System dependencies
+I wrote these steps from memory. It's likely that I missed something. If you run
+into any problems please [message me on Telegram](https://t.me/marckohlbrugge)
+and very clearly explain what's not working. What you tried. What you expected
+to happen. What did happen. Try this:
 
-* Configuration
+1. Clone this repo
 
-* Database creation
+2. Create a Telegram bot using [@BotFather](https://t.me/botfather)
 
-* Database initialization
+3. Copy sample.env to .env and fill out each variable
 
-* How to run the test suite
+4. `bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+5. Configure your database in `config/database.yml`
 
-* Deployment instructions
+6. Create the database `rails db:create`
 
-# LICENSE
+7. On production `rails telegram:bot:set_webhook` to configure the webhook to
+   communicate with Telegram. Or in development `rails telegram:bot:poller` to
+configure the poller.
 
-The code is licensed under MIT license. Any images are NOT included.
+
+## Don't want to use S3?
+
+I use Heroku for hosting which doesn't support file uploads so I'm using S3
+instead. If you want to simplify your setup you can configure
+[Shrine](https://shrinerb.com) to use your local file system instead. You can do
+this in `config/initializes/shrine.rb`.
+
+## Want to join a community of makers?
+
+Eat More is built in public on [WIP](https://wip.chat). We are a community of
+makers motivating each other to ship. [Join us.](https://wip.chat).
+
+
+## LICENSE
+
+The code is licensed under MIT license. Images are NOT included. You cannot use
+the donuts illustration without getting a license from the creator. I'm not
+linking it here however, because I don't want everyone to start using the same
+image. You can also not use the Eat More logo.
