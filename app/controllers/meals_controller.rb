@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class MealsController < ApplicationController
-  before_action :set_meal, only: [:show, :update, :destroy]
+  before_action :set_meal, only: %i[show update destroy]
 
   # GET /meals
   def index

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include ActionView::Helpers::DateHelper
   include Rails.application.routes.url_helpers
 
   def start(*)
-    text = %{
+    text = %(
       👋 Hi there,
 
 I will help you eat more. Here's how it works:
@@ -16,12 +18,12 @@ Type /link to get a secret link to your private profile
 You can turn on /reminders to get notified when you haven't eaten in a while. Type /reminders to toggle your reminders on/off.
 
 Bon appetite!
-    }
+    )
     respond_with :message, text: text
   end
 
   def message(*)
-    return unless payload["photo"].present?
+    return if payload["photo"].blank?
 
     photo = payload["photo"].sort_by { |p| p["file_size"] }.last
     file_id = photo["file_id"]

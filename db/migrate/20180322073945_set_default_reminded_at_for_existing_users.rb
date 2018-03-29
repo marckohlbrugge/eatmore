@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SetDefaultRemindedAtForExistingUsers < ActiveRecord::Migration[5.2]
   def change
     User.find_each do |user|
