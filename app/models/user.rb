@@ -3,7 +3,7 @@
 class User < ApplicationRecord
   has_secure_token :profile_token
 
-  has_many :meals
+  has_many :meals, dependent: :destroy
 
   scope :needs_reminding, lambda {
     joins(:meals)
