@@ -29,11 +29,6 @@ Rails/TimeZone:
     - 'app/controllers/telegram_webhooks_controller.rb'
     - 'app/models/user.rb'
 
-# Offense count: 1
-Style/DateTime:
-  Exclude:
-    - 'app/models/user.rb'
-
 # Offense count: 37
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
