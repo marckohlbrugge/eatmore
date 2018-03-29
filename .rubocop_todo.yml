@@ -7,15 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-Metrics/AbcSize:
-  Max: 24
-
-# Offense count: 1
-# Configuration parameters: CountComments.
-Metrics/MethodLength:
-  Max: 13
-
-# Offense count: 1
 # Configuration parameters: Include.
 # Include: app/models/**/*.rb
 Rails/HasManyOrHasOneDependent:

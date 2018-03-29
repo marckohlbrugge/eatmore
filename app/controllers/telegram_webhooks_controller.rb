@@ -23,16 +23,10 @@ Bon appetite!
   end
 
   def message(*)
-    return if payload["photo"].blank?
-
-    photo = payload["photo"].sort_by { |p| p["file_size"] }.last
-    file_id = photo["file_id"]
-    file = bot.get_file(file_id: file_id)
-
-    remote_url = "https://api.telegram.org/file/bot#{ENV.fetch("TELEGRAM_BOT_TOKEN")}/#{file["result"]["file_path"]}"
+    return unless photo?
 
     previous_meal_at = last_meal_at
-    user.meals.create name: payload["caption"], image_remote_url: remote_url, created_at: payload_timestamp
+    user.meals.create name: payload["caption"], image_remote_url: photo_url, created_at: payload_timestamp
 
     status = if previous_meal_at
                "previous meal was #{time_ago_in_words(previous_meal_at)} ago"
@@ -99,5 +93,17 @@ Bon appetite!
 
   def payload_timestamp
     Time.at payload["date"]
+  end
+
+  def photo?
+    payload["photo"].present?
+  end
+
+  def photo_url
+    photo = payload["photo"].sort_by { |p| p["file_size"] }.last
+    file_id = photo["file_id"]
+    file = bot.get_file file_id: file_id
+
+    "https://api.telegram.org/file/bot#{ENV.fetch("TELEGRAM_BOT_TOKEN")}/#{file["result"]["file_path"]}"
   end
 end
