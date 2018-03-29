@@ -20,7 +20,6 @@ Bon appetite!
     respond_with :message, text: text
   end
 
-
   def message(*)
     return unless payload["photo"].present?
 
@@ -83,7 +82,6 @@ Bon appetite!
   rescue_from Telegram::Bot::Forbidden do
     # Forbidden: bot was blocked by the user
   end
-
 
   private
 
