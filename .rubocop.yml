@@ -16,4 +16,7 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 
+Documentation:
+  Enabled: false
+
 inherit_from: .rubocop_todo.yml

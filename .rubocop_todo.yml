@@ -34,10 +34,6 @@ Style/DateTime:
   Exclude:
     - 'app/models/user.rb'
 
-# Offense count: 19
-Style/Documentation:
-  Enabled: false
-
 # Offense count: 1
 Style/MixinUsage:
   Exclude:
