@@ -1,8 +1,6 @@
 # Eat More
 
-<p align"center">
 ![Eat More](app/assets/images/eatmore.png)
-</p>
 
 [Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
 
