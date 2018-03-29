@@ -1,7 +1,7 @@
 # Eat More
 
 <p align"center">
-![Eat More](https://github.com/marckohlbrugge/eatmore/blob/master/app/assets/images/eatmore.png)
+![Eat More](https://raw.githubusercontent.com/marckohlbrugge/eatmore/master/app/assets/images/eatmore.png?token=AAFsXIYAAFCNRD7AjIlHHY8nBDIiEYOTks5axg_wwA%3D%3D)
 </p>
 
 [Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
