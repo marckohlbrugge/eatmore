@@ -1,7 +1,7 @@
 # Eat More
 
 <p align"center">
-![Eat More](https://raw.githubusercontent.com/marckohlbrugge/eatmore/master/app/assets/images/eatmore.png)
+![Eat More](app/assets/images/eatmore.png)
 </p>
 
 [Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
@@ -42,8 +42,8 @@ this in `config/initializes/shrine.rb`.
 
 ## Want to join a community of makers?
 
-Eat More was built in public in 1 day on [WIP](https://wip.chat). We are a
-community of makers motivating each other to ship. [Join us](https://wip.chat).
+Eat More was [built in public](https://wip.chat/products/970) in 1 day on WIP.
+We are a community of makers motivating each other to ship. [Join us](https://wip.chat).
 
 ## Questions, feature requests, bugs, etc
 
