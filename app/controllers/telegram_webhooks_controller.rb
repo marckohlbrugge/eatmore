@@ -33,7 +33,7 @@ Bon appetite!
     user.meals.create name: payload["caption"], image_remote_url: remote_url, created_at: payload_timestamp
 
     status = if previous_meal_at
-              "previous meal was #{time_ago_in_words(previous_meal_at)} ago"
+               "previous meal was #{time_ago_in_words(previous_meal_at)} ago"
              else
                "Your first logged meal. Yay!"
              end
