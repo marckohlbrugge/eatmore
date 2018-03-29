@@ -31,7 +31,7 @@ Bon appetite!
     remote_url = "https://api.telegram.org/file/bot#{ENV.fetch("TELEGRAM_BOT_TOKEN")}/#{file["result"]["file_path"]}"
 
     previous_meal_at = last_meal_at
-    user.meals.create name: payload["caption"], image_remote_url: remote_url
+    user.meals.create name: payload["caption"], image_remote_url: remote_url, created_at: payload_timestamp
 
     status = if previous_meal_at
               "previous meal was #{time_ago_in_words(previous_meal_at)} ago"
@@ -97,4 +97,7 @@ Bon appetite!
     user.meals.maximum(:created_at)
   end
 
+  def payload_timestamp
+    Time.at payload["date"]
+  end
 end
