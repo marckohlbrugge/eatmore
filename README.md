@@ -53,7 +53,7 @@ be ignored. Please don't create issues for these.
 
 ## LICENSE
 
-The code is licensed under MIT license. Images are NOT included. You cannot use
+The code is licensed under [MIT license](LICENSE). Images are NOT included. You cannot use
 the donuts illustration without getting a license from the creator. I'm not
 linking it here however, because I don't want everyone to start using the same
 image. You can also not use the Eat More logo.
