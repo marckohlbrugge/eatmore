@@ -26,6 +26,6 @@ class User < ApplicationRecord
   private
 
   def set_reminded_at
-    self.reminded_at = Time.now
+    self.reminded_at = Time.zone.now
   end
 end

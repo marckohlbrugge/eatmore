@@ -92,7 +92,7 @@ Bon appetite!
   end
 
   def payload_timestamp
-    Time.at payload["date"]
+    Time.zone.at payload["date"]
   end
 
   def photo?
