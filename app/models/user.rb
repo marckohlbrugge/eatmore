@@ -27,6 +27,10 @@ class User < ApplicationRecord
     update reminders_enabled: !reminders_enabled?
   end
 
+  def touch_reminded_at
+    update reminded_at: Time.zone.now
+  end
+
   private
 
   def set_reminded_at
