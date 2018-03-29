@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+# LICENSE
+
+The code is licensed under MIT license. Any images are NOT included.
