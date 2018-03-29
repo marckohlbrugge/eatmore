@@ -23,6 +23,10 @@ class User < ApplicationRecord
     meals.newest.created_at
   end
 
+  def toggle_reminders
+    update reminders_enabled: !reminders_enabled?
+  end
+
   private
 
   def set_reminded_at

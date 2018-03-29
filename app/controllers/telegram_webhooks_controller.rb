@@ -64,7 +64,7 @@ Bon appetite!
   end
 
   def reminders(*)
-    user.toggle! :reminders_enabled
+    user.toggle_reminders
 
     text = if user.reminders_enabled?
              "🚨 Reminders are turned on. Type /reminders to turn them off."
