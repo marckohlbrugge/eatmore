@@ -1,5 +1,9 @@
 # Eat More
 
+<p align"center">
+![Eat More](https://github.com/marckohlbrugge/eatmore/blob/master/app/assets/images/eatmore.png)
+</p>
+
 [Eat More](https://eatmore.io) is a Telegram bot that reminds you to eat more.
 
 I am open sourcing the code to give you an idea of what it takes to build such
@@ -13,7 +17,7 @@ into any problems please [message me on Telegram](https://t.me/marckohlbrugge)
 and very clearly explain what's not working. What you tried. What you expected
 to happen. What did happen. Try this:
 
-1. Clone this repo
+1. `git clone https://github.com/marckohlbrugge/eatmore.git`
 
 2. Create a Telegram bot using [@BotFather](https://t.me/botfather)
 
@@ -39,8 +43,8 @@ this in `config/initializes/shrine.rb`.
 
 ## Want to join a community of makers?
 
-Eat More is built in public on [WIP](https://wip.chat). We are a community of
-makers motivating each other to ship. [Join us.](https://wip.chat).
+Eat More was built in public in 1 day on [WIP](https://wip.chat). We are a
+community of makers motivating each other to ship. [Join us](https://wip.chat).
 
 
 ## LICENSE
