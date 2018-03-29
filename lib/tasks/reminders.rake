@@ -6,7 +6,7 @@ namespace :reminders do
       time_ago_in_words = ActionView::Helpers::DateHelper.time_ago_in_words user.last_meal_at
       text = "You haven't eaten since #{time_ago_in_words} ago. Maybe grab some food?"
       Telegram.bot.send_message(chat_id: user.telegram_id, text: text)
-      user.touch :reminded_at
+      user.touch_reminded_at
     end
   end
 end
