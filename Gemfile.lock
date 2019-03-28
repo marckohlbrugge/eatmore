@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/telegram-bot-rb/telegram-bot.git
-  revision: bdff6b2e1ce50cb41639f47942fa13802033f2f1
+  revision: 1cb3265371221b0518efa501b824ea2416ad1681
   branch: master
   specs:
-    telegram-bot (0.13.0)
+    telegram-bot (0.14.1)
       actionpack (>= 4.0, < 6.0)
       activesupport (>= 4.0, < 6.0)
       httpclient (~> 2.7)
@@ -96,13 +96,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    concurrent-ruby (1.1.5)
     crass (1.0.4)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
     down (4.3.0)
-    erubi (1.7.1)
+    erubi (1.8.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.23)
@@ -159,7 +160,7 @@ GEM
     public_suffix (3.0.2)
     puma (3.11.3)
     rack (2.0.6)
-    rack-test (0.8.3)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0.rc1)
       actioncable (= 5.2.0.rc1)
