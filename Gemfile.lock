@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/telegram-bot-rb/telegram-bot.git
-  revision: bdff6b2e1ce50cb41639f47942fa13802033f2f1
+  revision: da31cd148aa850c766a5e06d7da283b434dc2b6d
   branch: master
   specs:
-    telegram-bot (0.13.0)
-      actionpack (>= 4.0, < 6.0)
-      activesupport (>= 4.0, < 6.0)
+    telegram-bot (0.14.3)
+      actionpack (>= 4.0, < 6.1)
+      activesupport (>= 4.0, < 6.1)
       httpclient (~> 2.7)
 
 GEM
@@ -103,7 +103,7 @@ GEM
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
     down (4.3.0)
-    erubi (1.7.1)
+    erubi (1.8.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.10.0)
@@ -150,7 +150,7 @@ GEM
     msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.0)
-    nokogiri (1.10.2)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parallel (1.12.1)
     parser (2.5.0.5)
@@ -159,8 +159,8 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.2)
     puma (3.11.3)
-    rack (2.0.6)
-    rack-test (0.8.3)
+    rack (2.0.7)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0.rc1)
       actioncable (= 5.2.0.rc1)
@@ -178,7 +178,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.0.rc1)
       actionpack (= 5.2.0.rc1)
