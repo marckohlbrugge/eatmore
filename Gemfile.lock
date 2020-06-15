@@ -159,7 +159,7 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.2)
     puma (3.11.3)
-    rack (2.0.6)
+    rack (2.2.3)
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.2.0.rc1)
