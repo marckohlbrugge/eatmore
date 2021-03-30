@@ -10,7 +10,10 @@
 
     = link_to "Add to Telegram", "https://t.me/#{ENV.fetch("TELEGRAM_BOT_USERNAME")}"
 
+    .credits
+      %p Made by #{link_to "Marc Köhlbrugge", "https://marckohlbrugge.com"}. I also made #{link_to "startup jobs", "https://startup.jobs"}, a #{link_to "community for makers", "https://wip.co"}, and a place to #{link_to "discover new startups", "https://betalist.com"}. Follow me #{link_to "on Twitter", "https://twitter.com/marckohlbrugge"} to see what else I'm making.
+
   .wip
-    = link_to "https://wip.chat/products/970" do
+    = link_to "https://wip.co/products/eatmore" do
       .text Follow on WIP
       .icon 🚧
