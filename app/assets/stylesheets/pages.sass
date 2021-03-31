@@ -58,26 +58,27 @@ body
     width: 100%
     margin: 0 0 1rem 0
 
-  a:link, a:visited
-    margin-top: 1em
-    box-sizing: border-box
-    width: 100%
-    display: flex
-    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%)
-    border-radius: 0.5rem
-    padding: 1rem
-    color: white
-    text-decoration: none
-    justify-content: center
-    &::before
-      display: block
-      content: ""
-      background-image: asset-url("telegram_airplane.svg")
-      background-repeat: no-repeat
-      background-size: contains
-      width: 3rem
-  a:hover
-    background-image: linear-gradient(-180deg, darken(#37AEE2 , 10%) 0%, darken(#1E96C8, 10%) 100%)
+  a.button
+    &:link, &:visited
+      margin-top: 1em
+      box-sizing: border-box
+      width: 100%
+      display: flex
+      background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%)
+      border-radius: 0.5rem
+      padding: 1rem
+      color: white
+      text-decoration: none
+      justify-content: center
+      &::before
+        display: block
+        content: ""
+        background-image: asset-url("telegram_airplane.svg")
+        background-repeat: no-repeat
+        background-size: contains
+        width: 3rem
+    &:hover
+      background-image: linear-gradient(-180deg, darken(#37AEE2 , 10%) 0%, darken(#1E96C8, 10%) 100%)
 
 .wip
   a:link, a:visited
