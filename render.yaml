@@ -9,7 +9,6 @@ services:
   autoDeploy: true
   domains:
   - eatmore.io
-  - render.eatmore.io
   envVars:
   - key: DATABASE_URL
     fromDatabase:
