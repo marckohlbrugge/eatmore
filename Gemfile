@@ -22,6 +22,7 @@ gem "rubocop"
 gem "simple_calendar", "~> 2.0"
 gem "telegram-bot", github: "telegram-bot-rb/telegram-bot", branch: "master"
 gem "whenever", require: false
+gem "bugsnag"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

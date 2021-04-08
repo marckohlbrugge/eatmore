@@ -14,6 +14,8 @@ services:
     fromDatabase:
       name: eatmore
       property: connectionString
+  - key: BUGSNAG_API_KEY
+    sync: false
 
 databases:
 - name: eatmore
