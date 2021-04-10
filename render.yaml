@@ -32,6 +32,22 @@ services:
 envVarGroups:
 - name: eatmore
   envVars:
+  - key: HOST
+    sync: false
+  - key: S3_ACCESS_KEY_ID
+    sync: false
+  - key: S3_BUCKET
+    sync: false
+  - key: S3_REGION
+    sync: false
+  - key: S3_SECRET_ACCESS_KEY
+    sync: false
+  - key: SECRET_KEY_BASE
+    sync: false
+  - key: TELEGRAM_BOT_TOKEN
+    sync: false
+  - key: TELEGRAM_BOT_USERNAME
+    sync: false
   - key: BUGSNAG_API_KEY
     sync: false
 
