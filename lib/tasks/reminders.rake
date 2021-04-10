@@ -6,7 +6,13 @@ namespace :reminders do
     User.needs_reminding.each do |user|
       time_ago_in_words = time_ago_in_words(user.last_meal_at)
       text = "You haven't eaten since #{time_ago_in_words} ago. Maybe grab some food?"
-      Telegram.bot.send_message(chat_id: user.telegram_id, text: text)
+
+      begin
+        Telegram.bot.send_message(chat_id: user.telegram_id, text: text)
+      rescue Telegram::Bot::Forbidden
+        # Ignore
+      end
+
       user.touch_reminded_at
     end
   end
