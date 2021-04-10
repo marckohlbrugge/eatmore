@@ -10,12 +10,11 @@ services:
   domains:
   - eatmore.io
   envVars:
+  - fromGroup: expensivechat
   - key: DATABASE_URL
     fromDatabase:
       name: eatmore
       property: connectionString
-  - key: BUGSNAG_API_KEY
-    sync: false
 
 - type: cron
   name: eatmore-cron
@@ -23,6 +22,18 @@ services:
   schedule: "0 * * * *"
   buildCommand: bin/build
   startCommand: rake reminders:send
+  envVars:
+  - fromGroup: expensivechat
+  - key: DATABASE_URL
+    fromDatabase:
+      name: eatmore
+      property: connectionString
+
+envVarGroups:
+- name: eatmore
+  envVars:
+  - key: BUGSNAG_API_KEY
+    sync: false
 
 databases:
 - name: eatmore
