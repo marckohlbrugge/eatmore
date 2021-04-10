@@ -5,7 +5,7 @@ namespace :reminders do
   task send: :environment do
     User.needs_reminding.each do |user|
       time_ago_in_words = time_ago_in_words(user.last_meal_at)
-      text = "You haven't eaten since #{time_ago_in_words} ago. Maybe grab some food?"
+      text = "You haven't eaten since #{time_ago_in_words} ago. Maybe grab some food?\n\nTurn off reminders with /reminders"
 
       begin
         Telegram.bot.send_message(chat_id: user.telegram_id, text: text)
