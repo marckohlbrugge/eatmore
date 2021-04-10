@@ -17,5 +17,12 @@ services:
   - key: BUGSNAG_API_KEY
     sync: false
 
+- type: cron
+  name: eatmore-cron
+  env: ruby
+  schedule: "0 * * * *"
+  buildCommand: bin/build
+  startCommand: rake reminders:send
+
 databases:
 - name: eatmore
