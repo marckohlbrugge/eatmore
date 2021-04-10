@@ -11,6 +11,8 @@ namespace :reminders do
         Telegram.bot.send_message(chat_id: user.telegram_id, text: text)
       rescue Telegram::Bot::Forbidden
         # Ignore
+      rescue Telegram::Bot::Error
+        # Ignore
       end
 
       user.touch_reminded_at
