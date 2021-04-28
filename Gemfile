@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.2"
 
-gem "aws-sdk-s3", "~> 1.2"
+gem "aws-sdk-s3", "~> 1.94"
 gem "coffee-rails", "~> 4.2"
 gem "haml-rails"
 gem "jbuilder", "~> 2.11"
