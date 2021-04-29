@@ -1,0 +1,57 @@
+version: 2
+registries:
+  rubygems-server-gem-fury-io-marckohlbrugge:
+    type: rubygems-server
+    url: https://gem.fury.io/marckohlbrugge
+    token: "${{secrets.RUBYGEMS_SERVER_GEM_FURY_IO_MARCKOHLBRUGGE_TOKEN}}"
+  rubygems-server-rubygems-pkg-github-com-marckohlbrugge:
+    type: rubygems-server
+    url: https://rubygems.pkg.github.com/marckohlbrugge
+    token: "${{secrets.RUBYGEMS_SERVER_RUBYGEMS_PKG_GITHUB_COM_MARCKOHLBRUGGE_TOKEN}}"
+
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: aws-sdk-s3
+    versions:
+    - 1.87.0
+    - 1.88.0
+    - 1.88.1
+    - 1.88.2
+    - 1.89.0
+    - 1.90.0
+    - 1.91.0
+    - 1.92.0
+    - 1.93.0
+    - 1.93.1
+  - dependency-name: nokogiri
+    versions:
+    - 1.10.10
+    - 1.11.3
+  - dependency-name: loofah
+    versions:
+    - 2.9.0
+  - dependency-name: rake
+    versions:
+    - 13.0.3
+  - dependency-name: rubocop
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.12.0
+    - 1.9.0
+    - 1.9.1
+  - dependency-name: capybara
+    versions:
+    - 3.32.2
+  - dependency-name: rack
+    versions:
+    - 2.2.3
+  registries:
+  - rubygems-server-gem-fury-io-marckohlbrugge
+  - rubygems-server-rubygems-pkg-github-com-marckohlbrugge
