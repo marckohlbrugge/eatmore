@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/telegram-bot-rb/telegram-bot.git
-  revision: bdff6b2e1ce50cb41639f47942fa13802033f2f1
+  revision: 3049ced903fd0f7ece0f7a318d1c671f9501989b
   branch: master
   specs:
-    telegram-bot (0.13.0)
-      actionpack (>= 4.0, < 6.0)
-      activesupport (>= 4.0, < 6.0)
+    telegram-bot (0.15.4)
+      actionpack (>= 4.0, < 6.2)
+      activesupport (>= 4.0, < 6.2)
       httpclient (~> 2.7)
 
 GEM
@@ -98,7 +98,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     crass (1.0.6)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
@@ -136,7 +136,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.9.1)
+    loofah (2.10.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -148,11 +148,11 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.0.0)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.3.0)
-    nokogiri (1.11.3)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     parallel (1.20.1)
